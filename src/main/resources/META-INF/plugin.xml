@@ -1,0 +1,27 @@
+<idea-plugin>
+    <id>com.github.path</id>
+    <name>Path Copier</name>
+    <vendor>path</vendor>
+    <description><![CDATA[
+        Copy file paths to clipboard with one click.
+        Two buttons in status bar:
+        <ul>
+            <li>Copy absolute path</li>
+            <li>Copy path relative to repository root</li>
+        </ul>
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>Git4Idea</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <statusBarWidgetFactory
+                id="PathCopier.AbsolutePath"
+                implementation="com.github.path.AbsolutePathWidgetFactory"
+                order="after positionWidget"/>
+        <statusBarWidgetFactory
+                id="PathCopier.RelativePath"
+                implementation="com.github.path.RelativePathWidgetFactory"
+                order="after PathCopier.AbsolutePath"/>
+    </extensions>
+</idea-plugin>

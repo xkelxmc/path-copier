@@ -1,0 +1,15 @@
+# Gradle
+.gradle/
+build/
+
+# IntelliJ Platform Plugin
+.intellijPlatform/
+
+# IDE
+*.iml
+.idea/workspace.xml
+.idea/compiler.xml
+.idea/kotlinc.xml
+
+# OS
+.DS_Store
